@@ -141,7 +141,7 @@ hr {
 .sec-main {
   position: relative;
   height: 560px;
-  background: url(http://media3.s-nbcnews.com/j/newscms/2014_20/440456/140513-headphones-jms-1841_2a55e4cabfecd0919ade62666ac4a9ed.nbcnews-fp-1000-400.jpg) no-repeat center center;
+  background: url(https://flintbuilders.com/wp-content/uploads/2016/06/Geidt-Hall-04-1024x683.jpg) no-repeat center center;
   background-size: cover;
 
   &:after {
@@ -200,6 +200,28 @@ hr {
 
 .sec-services h2 {
   margin: 1em 0;
+}
+
+.sec-services .sqs-block-button {
+    border: solid 2px #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    padding: 13px 26px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-style: normal;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
 }
 
 /*Testimonials*/
