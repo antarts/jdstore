@@ -1,7 +1,15 @@
 <div class="row">
   <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+    <% if @photos.present? %>
+      <% @photos.each_with_index do |p, index| %>
+        <% if index == 0 %>
+          <%= image_tag p.avatar.medium.url %>
+          <div style="letter-spacing: -8px">
+        <% else %>
+          <%= image_tag p.avatar.thumb.url %>
+        <% end %>
+      <% end %>
+      </div>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
@@ -13,9 +21,9 @@
         <%= @product.description %>
       </p>
     </div>
-    <div class="rating">
-       <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-    </div>
+    速度： <%= rating_for @product, 'speed', disable_after_rate: true %>
+    干货： <%= rating_for @product, 'engine', disable_after_rate: true %>
+    价格： <%= rating_for @product, 'price', disable_after_rate: true %>
     <div> 数量 : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
     <div class="pull-right">

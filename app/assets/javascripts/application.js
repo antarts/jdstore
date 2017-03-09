@@ -16,6 +16,8 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/modal
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .
 
 $(function() {

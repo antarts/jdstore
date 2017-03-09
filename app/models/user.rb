@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :orders
 
+  ratyrate_rater
+
   def admin?
     is_admin
   end
