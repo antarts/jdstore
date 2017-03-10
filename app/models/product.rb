@@ -6,4 +6,6 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :photos
 
   has_many :comments, dependent: :destroy
+
+  acts_as_votable
 end
