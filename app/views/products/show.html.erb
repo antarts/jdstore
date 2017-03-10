@@ -35,4 +35,12 @@
       <% end %>
     </div>
   </div>
+  <h3 class="comments_title">
+    <%= @product.comments.count %> Comments
+  </h3>
+  <hr>
+  <div id="comments">
+    <%= render @product.comments %>
+    <%= render "comments/form"%>
+  </div>
 </div>

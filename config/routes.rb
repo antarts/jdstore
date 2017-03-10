@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :comments
+
   post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users, controllers: {
     sessions:      'users/sessions',
@@ -23,6 +25,8 @@ Rails.application.routes.draw do
     member do
       post :add_to_cart
     end
+
+    resources :comments
 
     collection do
       get :search
