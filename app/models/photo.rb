@@ -1,4 +1,4 @@
-class Photo < ApplicationRecord
-  mount_uploader :avater, AvatarUploader
+class Photo < ActiveRecord::Base
+  mount_uploader :avatar, AvatarUploader
   belongs_to :product
 end

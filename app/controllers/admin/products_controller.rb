@@ -23,9 +23,10 @@ class Admin::ProductsController < ApplicationController
     if @product.save
       unless params[:photos].nil?
         params[:photos]['avatar'].each do |a|
-          @photo = @product.photoss.create(avatar: a)
+          @photo = @product.photos.create(avatar: a)
         end
       end
+
       redirect_to admin_products_path
     else
       render :new
@@ -41,7 +42,6 @@ class Admin::ProductsController < ApplicationController
 
     if !params[:photos].nil?
       @product.photos.destroy_all # need to destroy old pics first
-
       params[:photos]['avatar'].each do |a|
         @picture = @product.photos.create(avatar: a)
       end
@@ -59,6 +59,6 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, [:image])
   end
 end
