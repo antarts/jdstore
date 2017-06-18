@@ -48,7 +48,7 @@
               <li class="[ hidden-xs ]"><a href="#toggle-search" class="[ animate ]"><span class="[ glyphicon glyphicon-search ]"></span></a></li>
               <li>
                     <%= link_to carts_path do %>
-                    购物车  <i class="fa fa-shopping-cart"></i> <span class="badge"><%= current_cart.products.count %> </span>
+                    购物车  <i class="fa fa-shopping-cart"></i> <span class="badge"><span id="add_to_cart_count"><%= current_cart.products.count %> </span></span>
                     <% end %>
               </li>
 

@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ @import "font-awesome";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
 
 /* Header */
 .animate {
@@ -253,60 +257,26 @@ body{
 }
          /* main */
          /* Reset */
-         a{text-decoration:none;color:inherit;}
+a{text-decoration:none;color:inherit;}
         //  html{width:100%;height:100%;}
 
-         /* Body */
+.container a {
+    color: #ababab;
+    text-decoration: none;
+}
 
-        //  body {
-        //     font-size: 17px;
-        //     line-height: 1.52947;
-        //     font-weight: 400;
-        //     letter-spacing: -.021em;
-        //     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-        //     background-color: #fff;
-        //     color: #333;
-        //     font-style: normal;
-        // }
+#gotop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #F25F5C;
+  cursor: pointer;
+  display: none; /*默认先隐藏掉*/
+}
 
-
-         /* footer */
-        //  .container {
-        //      font-size: 14px;
-        //      line-height: 1.45455;
-        //      font-weight: 400;
-        //      letter-spacing: .005em;
-        //      font-family: SF Pro Text,Myriad Set Pro,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-        //      background-color: #f2f2f2;
-        //      color: #333;
-        //      min-width: 100%;
-        //      position: relative;
-        //      z-index: 1;
-        //  }
-
-         .container a {
-             color: #ababab;
-             text-decoration: none;
-         }
-
-        #gotop {
-          width: 50px;
-          height: 50px;
-          position: fixed;
-          right: 20px;
-          bottom: 20px;
-          background: #F25F5C;
-          cursor: pointer;
-          display: none; /*默认先隐藏掉*/
-        }
-
-          .unstyled
-          {
-              list-style:none;
-          }
-
-
-
- @import "font-awesome";
- @import "bootstrap-sprockets";
- @import "bootstrap";
+  .unstyled
+  {
+      list-style:none;
+  }
