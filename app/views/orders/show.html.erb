@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
-		
+
 		<h2>订单明细</h2>
 
 		<table class="table table-bordered">
@@ -11,7 +11,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				
+
 				<% @product_lists.each do |product_list| %>
 				    <tr>
 				    	<td>
@@ -59,8 +59,14 @@
 				</tr>
 			</tbody>
 		</table>
-        
-        <% if !@order.is_paid? %>
+
+		<div class="pull-left">
+		  <% if @order.order_placed? || @order.paid? %>
+		  	<%= link_to("申请取消订单", apply_to_cancel_order_path(@order), method: :post, class: "btn btn-info") %>
+		  <% end %>
+		</div>
+		    
+    <% if !@order.is_paid? %>
 		<div class="group pull-right">
 			<%= link_to("以支付宝支付", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-danger") %>
 			<%= link_to("以微信支付", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-danger") %>
