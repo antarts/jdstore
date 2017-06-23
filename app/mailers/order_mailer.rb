@@ -12,7 +12,7 @@ class OrderMailer < ApplicationMailer
     @user        = order.user
     @product_lists = @order.product_lists
 
-    mail(to: "admin@info.com" , subject: "[JDstore] 用户#{order.user.email}申请取消订单 #{order.token}")
+    mail(to: "m.dream@foxmail.com" , subject: "[JDstore] 用户#{order.user.email}申请取消订单 #{order.token}")
   end
 
   def notify_ship(order)
